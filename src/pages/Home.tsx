@@ -147,8 +147,8 @@ export default function Home() {
               </Button>
             </Link>
             <motion.a
-              href="/PHY0_KHANT_KYAW.pdf"
-              download="PHY0_KHANT_KYAW.pdf"
+              href="/PHYO_KHANT_KYAW.pdf"
+              download="PHYO_KHANT_KYAW.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-lg font-medium text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-violet-500/50 transition-all backdrop-blur-sm"
