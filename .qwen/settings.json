@@ -4,7 +4,14 @@
       "Bash(npm run *)",
       "Bash(git init)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(copy *)",
+      "Bash(dir *)",
+      "Bash(xcopy *)",
+      "Bash(powershell *)",
+      "Bash(robocopy *)"
     ]
   },
   "$version": 3
