@@ -55,10 +55,12 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-cyan-600/20 to-fuchsia-600/20 rounded-3xl blur-3xl" />
             <div className="relative bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
-              <div className="aspect-square bg-gradient-to-br from-violet-600/20 to-cyan-600/20 rounded-2xl flex items-center justify-center">
-                <div className="w-40 h-40 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-600 flex items-center justify-center">
-                  <span className="text-5xl font-bold text-white">PK</span>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src="/pkk.jpg"
+                  alt="Phyo Khant Kyaw"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 flex items-center gap-3 px-4 py-2 bg-black/60 backdrop-blur-xl rounded-xl border border-white/10">
                 <MapPin className="w-4 h-4 text-violet-400" />
