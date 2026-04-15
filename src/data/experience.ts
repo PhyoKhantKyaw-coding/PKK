@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     id: 3,
     company: 'Secure Link Company Limited (Naypyitaw)',
     position: 'Software Developer',
-    period: 'Jan 2023 – Jan 2025',
+    period: 'Sep 2024 – Feb 2025',
     description: 'Developed government license application system with .NET Core and Angular',
     achievements: [
       'Developed DOTP Project – Domestic Operator License System for government operations',
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
     id: 4,
     company: 'Freelance',
     position: 'Full-Stack Developer',
-    period: '2022 – 2023',
+    period: '2023 – 2024',
     description: 'Delivered custom web applications and e-commerce solutions for various clients',
     achievements: [
       'Built Luxe-Look E-Commerce System – cosmetics platform with full admin panel and REST APIs',
