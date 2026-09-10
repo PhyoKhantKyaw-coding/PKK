@@ -61,7 +61,7 @@ export default function About() {
             <div className="relative bg-gradient-to-br from-white to-white dark:from-white/10 dark:to-white/5 border border-black/10 dark:border-white/10 rounded-3xl p-8 backdrop-blur-xl">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="/pkk.jpg"
+                  src="/pkk5.jpg"
                   alt="Phyo Khant Kyaw"
                   className="w-full h-full object-cover"
                 />
