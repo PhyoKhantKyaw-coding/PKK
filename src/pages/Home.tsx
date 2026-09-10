@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowRight, Download, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
-import { Link } from 'react-router-dom';
 
 const titles = [
   '.NET Developer',
@@ -70,10 +69,19 @@ export default function Home() {
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, titleIndex]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    setIsDarkMode(savedTheme === 'dark');
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
   return (
-    <div className="relative min-h-screen overflow-hidden noise-bg">
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-950/50 via-black to-cyan-950/50" />
+    <section  id="home" className={`flex h-screen flex-col items-center justify-center ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-white dark:from-violet-950/50 dark:via-black dark:to-cyan-950/50" />
 
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-[128px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-[128px] animate-pulse-glow animation-delay-4000" />
@@ -81,27 +89,17 @@ export default function Home() {
 
       <ParticleBackground />
 
-      <Section className="flex items-center justify-center min-h-screen relative z-10">
+      <Section className="flex items-center justify-center min-h-screen relative z-10" container={false}>
         <div className="text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-6"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300 mb-8">
-              <Sparkles className="w-4 h-4 text-violet-400" />
-              Available for new opportunities
-            </span>
-          </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">
-              <span className="text-gradient">Phyo Khant Kyaw</span>
+            <h1 className="text-5xl mt-8 md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight text-black dark:text-white">
+              Phyo Khant Kyaw
             </h1>
           </motion.div>
 
@@ -112,9 +110,9 @@ export default function Home() {
             className="mb-10"
           >
             <div className="h-16 flex items-center justify-center">
-              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-300">
+              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-black dark:text-white">
                 {displayText}
-                <span className="animate-cursor-blink text-violet-400">|</span>
+                <span className="animate-cursor-blink text-violet-500 dark:text-violet-400">|</span>
               </p>
             </div>
           </motion.div>
@@ -123,7 +121,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
+            className="text-black dark:text-white text-lg md:text-xl mb-12 max-w-2xl mx-auto"
           >
             Building cutting-edge backend systems, integrating AI technologies,
             and crafting scalable microservices that power the future.
@@ -135,23 +133,23 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Link to="/projects">
+            <a href="#projects">
               <Button variant="glow" size="lg" className="group">
                 View Projects
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
-            <Link to="/contact">
+            </a>
+            <a href="#contact">
               <Button variant="secondary" size="lg">
                 Contact Me
               </Button>
-            </Link>
+            </a>
             <motion.a
               href="/PHYO_KHANT_KYAW.pdf"
               download="PHYO_KHANT_KYAW.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-lg font-medium text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-violet-500/50 transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-lg font-mediumborder border-white/20 hover:bg-white/20 hover:border-violet-500/50 transition-all backdrop-blur-sm"
             >
               <Download className="w-5 h-5" />
               Download CV
@@ -176,7 +174,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all"
+                className="p-3.5 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white hover:text-violet-600 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-white/10 hover:border-violet-500/50 transition-all"
                 aria-label={social.label}
               >
                 <social.icon className="w-5 h-5" />
@@ -200,6 +198,6 @@ export default function Home() {
           <motion.div className="w-1 h-2 bg-white/40 rounded-full" />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 }

@@ -2,10 +2,28 @@ import { Experience } from '../types';
 
 export const experiences: Experience[] = [
   {
-    id: 1,
+  id: 1,
+  company: 'CB Bank',
+  position: 'Assistant Supervisor',
+  period: 'Jul 2026 – Present',
+  description: 'Supporting core banking-related systems, third-party integrations, and microservices-based banking applications',
+  achievements: [
+    'Support core banking-related systems and technology solutions within the banking environment',
+    'Work with third-party system integrations to support communication between banking services and external systems',
+    'Work with microservices-based applications and RESTful APIs across banking technology projects',
+    'Support API routing and service communication using Ocelot API Gateway',
+    'Work with both .NET Framework 4.8 and .NET 10 projects across banking-related systems',
+    'Use Microsoft SQL Server Management Studio (SSMS) for database investigation, query execution, and data validation',
+    'Analyze application logs and troubleshoot system issues to identify potential root causes',
+    'Investigate and resolve integration, API, database, and service-level issues across banking applications',
+    'Support system testing, validation, troubleshooting, and technical issue resolution for banking-related services'
+  ],
+  },
+  {
+    id: 2,
     company: 'ShopDoora',
     position: 'Mid-Level .NET Developer',
-    period: 'Feb 2026 – Present',
+    period: 'Feb 2026 – Jul 2026',
     description: 'Developing microservices-based applications with Clean Architecture and modern authentication',
     achievements: [
       'Developed Nutrition Coach Project using Microservices-based .NET REST API architecture',
@@ -17,7 +35,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: 'Thetys Co., Ltd (under Fusion Solution Co., Ltd)',
     position: 'Software Developer',
     period: 'Feb 2025 – Feb 2026',
@@ -32,7 +50,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: 'Secure Link Company Limited (Naypyitaw)',
     position: 'Software Developer',
     period: 'Sep 2024 – Feb 2025',
@@ -47,7 +65,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: 'Freelance',
     position: 'Full-Stack Developer',
     period: '2023 – 2024',

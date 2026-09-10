@@ -28,6 +28,7 @@ export default function Contact() {
   ];
 
   return (
+    <section id="contact">
     <Section>
       <SectionTitle
         title="Get In Touch"
@@ -41,10 +42,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
-            Let's <span className="text-gradient">Connect</span>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+            Let's <span className="text-violet-600 dark:text-violet-400">Connect</span>
           </h3>
-          <p className="text-gray-400 mb-8 text-center">
+          <p className="text-black dark:text-white mb-8 text-center">
             I'm always open to discussing new projects, creative ideas, or opportunities to be
             part of your visions. Feel free to reach out!
           </p>
@@ -59,14 +60,14 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, x: 5 }}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-violet-500/50 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-violet-500/50 transition-all group"
               >
                 <div className={`p-3 rounded-xl bg-gradient-to-br ${info.gradient}`}>
                   <info.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500">{info.label}</div>
-                  <div className="text-white font-medium group-hover:text-violet-300 transition-colors">
+                  <div className="text-sm text-black dark:text-white">{info.label}</div>
+                  <div className="text-black dark:text-white font-medium group-hover:text-violet-600 dark:group-hover:text-violet-300 transition-colors">
                     {info.value}
                   </div>
                 </div>
@@ -74,15 +75,15 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-violet-950/50 via-black to-cyan-950/50 border border-white/10 relative overflow-hidden">
+          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/50 dark:via-black dark:to-cyan-950/50 border border-black/10 dark:border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/20 rounded-full blur-[50px]" />
             <div className="relative flex items-start gap-3">
               <div className="p-2 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-600">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="text-white font-semibold mb-1">Quick Response</h4>
-                <p className="text-gray-400 text-sm">
+                <h4 className="text-black dark:text-white font-semibold mb-1">Quick Response</h4>
+                <p className="text-black dark:text-white text-sm">
                   I typically respond within 24 hours. Let's start a conversation!
                 </p>
               </div>
@@ -91,5 +92,6 @@ export default function Contact() {
         </motion.div>
       </div>
     </Section>
+    </section>
   );
 }

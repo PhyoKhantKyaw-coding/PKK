@@ -20,11 +20,11 @@ export default function SectionTitle({
         className
       )}
     >
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-        <span className="text-gradient">{title}</span>
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black dark:text-white">
+        {title}
       </h2>
       {subtitle && (
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-black dark:text-white text-lg md:text-xl max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}

@@ -2,7 +2,26 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
-    id: 1,
+  id: 1,
+  title: 'CB Bank Banking Technology',
+  description: 'Core banking-related technology solutions involving microservices, third-party integrations, API Gateway, and .NET applications',
+  tech: ['.NET 4.8', '.NET 10', 'Microservices', 'REST API', 'Ocelot API Gateway', 'SQL Server', 'SSMS'],
+  features: [
+    'Supported core banking-related systems and banking technology applications',
+    'Developed and supported microservices-based services using .NET',
+    'Implemented and maintained third-party API integrations',
+    'Worked with Ocelot API Gateway for API routing and service communication',
+    'Worked across legacy .NET Framework 4.8 and modern .NET 10 projects',
+    'Analyzed application logs and troubleshot API, integration, and service-level issues',
+    'Used SQL Server and SSMS for database investigation, queries, and data validation',
+    'Supported system testing, validation, troubleshooting, and technical issue resolution',
+  ],
+  category: 'backend',
+  github: '#',
+  demo: '#',
+},
+  {
+    id: 2,
     title: 'Nutrition Coach (ShopDoora)',
     description: 'Microservices-based nutrition coaching platform with JWT auth, SMS OTP, and master data management',
     tech: ['.NET REST API', 'Microservices', 'Clean Architecture', 'JWT', 'SMS OTP'],
@@ -18,7 +37,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Intelligent Portal (OCR + AI)',
     description: 'Document processing system with OCR reading and OpenAI integration for structured JSON responses',
     tech: ['.NET REST API', 'Vue.js', 'OpenAI', 'OCR'],
@@ -34,7 +53,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Business Card Management & Printing',
     description: 'Drag-and-drop business card template builder with company and user assignment',
     tech: ['.NET REST API', 'Vue.js', 'Docker'],
@@ -50,7 +69,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 4,
+    id: 5,
     title: 'CP Meiji – Purchase Order AI',
     description: 'AI-powered purchase order processing with Azure OCR, OpenAI, and LINE channel integration',
     tech: ['.NET REST API', 'Vue.js', 'Azure OCR', 'OpenAI', 'Azure Blob'],
@@ -67,7 +86,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Luxe-Look E-Commerce',
     description: 'Cosmetics e-commerce platform with full admin panel and secure REST APIs',
     tech: ['C# .NET REST API', 'React.js', 'SQL Server'],
@@ -83,7 +102,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 6,
+    id: 7,
     title: 'DOTP – Domestic Operator License System',
     description: 'Government license application system with renewal, modification, and cancellation modules',
     tech: ['.NET Core', 'Angular', 'SQL Server'],
@@ -99,7 +118,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Hospital Booking System',
     description: 'Appointment booking system for patients with doctor scheduling and admin dashboard',
     tech: ['ASP.NET MVC', 'SQL Server'],
@@ -114,7 +133,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Food Order Management System',
     description: 'Food ordering platform with order lifecycle management and daily sales tracking',
     tech: ['ASP.NET MVC', 'SQL Server'],
@@ -130,7 +149,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 9,
+    id: 10,
     title: 'ATM System',
     description: 'Banking ATM simulation with deposit, withdraw, transfer, and security features',
     tech: ['.NET API', 'Vue.js'],
@@ -145,7 +164,7 @@ export const projects: Project[] = [
     demo: '#',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Retail Management System',
     description: 'Retail platform with user shopping features and comprehensive admin panel',
     tech: ['.NET API', 'React.js'],

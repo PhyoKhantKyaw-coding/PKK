@@ -25,18 +25,18 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
         transition={{ type: 'spring', bounce: 0.3 }}
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-3xl"
+        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-black border border-gray-200 dark:border-white/10 rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 transition-colors"
+          className="absolute top-4 right-4 z-10 p-2 rounded-xl bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-white/20 transition-colors"
         >
           <ChevronRight className="w-5 h-5 rotate-45" />
         </button>
 
         <div className="p-6 md:p-8">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{project.title}</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white mb-4">{project.title}</h3>
           
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tech.map((tech) => (
@@ -44,11 +44,11 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
             ))}
           </div>
 
-          <p className="text-gray-300 text-lg mb-8">{project.description}</p>
+          <p className="text-black dark:text-white text-lg mb-8">{project.description}</p>
 
           <div className="mb-8">
-            <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-violet-400" />
+            <h4 className="text-lg font-semibold text-black dark:text-white mb-4 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-violet-500 dark:text-violet-400" />
               Key Features
             </h4>
             <ul className="space-y-3">
@@ -58,9 +58,9 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-3 text-gray-400"
+                  className="flex items-start gap-3 text-black dark:text-white"
                 >
-                  <ChevronRight className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
+                  <ChevronRight className="w-5 h-5 text-violet-500 dark:text-violet-400 flex-shrink-0 mt-0.5" />
                   {feature}
                 </motion.li>
               ))}
@@ -76,6 +76,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   return (
+    <section id="projects">
     <Section>
       <SectionTitle
         title="Featured Projects"
@@ -93,16 +94,16 @@ export default function Projects() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               onClick={() => setSelectedProject(project)}
-              className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-violet-500/50 cursor-pointer transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              className="group relative p-6 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-violet-500/50 cursor-pointer transition-all duration-500 hover:-translate-y-2 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-gradient transition-colors">
+                <h3 className="text-xl font-semibold text-black dark:text-white mb-2 group-hover:text-gradient transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 line-clamp-2">
+                <p className="text-black dark:text-white mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -117,7 +118,7 @@ export default function Projects() {
                   )}
                 </div>
 
-                <div className="flex items-center text-sm text-violet-400 group-hover:text-violet-300 transition-colors">
+                <div className="flex items-center text-sm text-violet-600 dark:text-violet-400 group-hover:text-violet-500 dark:group-hover:text-violet-300 transition-colors">
                   <span>View details</span>
                   <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -136,5 +137,6 @@ export default function Projects() {
         )}
       </AnimatePresence>
     </Section>
+    </section>
   );
 }

@@ -1,44 +1,48 @@
-import { motion } from 'framer-motion';
-import { Code, Database, Brain, Cloud, MapPin } from 'lucide-react';
-import Section from '@/components/Section';
-import SectionTitle from '@/components/SectionTitle';
+import { motion } from "framer-motion";
+import { Code, Database, Brain, Cloud, MapPin } from "lucide-react";
+import Section from "@/components/Section";
+import SectionTitle from "@/components/SectionTitle";
 
 const highlights = [
   {
     icon: Database,
-    title: 'Backend Development',
-    description: 'Expert in .NET Core, C#, and building scalable RESTful APIs with microservices architecture.',
-    gradient: 'from-violet-600 to-purple-600',
+    title: "Backend Development",
+    description:
+      "Expert in .NET Core, C#, and building scalable RESTful APIs with microservices architecture.",
+    gradient: "from-violet-600 to-purple-600",
   },
   {
     icon: Code,
-    title: 'Full-Stack Skills',
-    description: 'Proficient in React, Vue.js, and modern frontend technologies for complete solutions.',
-    gradient: 'from-cyan-600 to-blue-600',
+    title: "Full-Stack Skills",
+    description:
+      "Proficient in React, Vue.js, and modern frontend technologies for complete solutions.",
+    gradient: "from-cyan-600 to-blue-600",
   },
   {
     icon: Brain,
-    title: 'AI Integration',
-    description: 'Experience integrating OpenAI, OCR, and machine learning into production applications.',
-    gradient: 'from-fuchsia-600 to-pink-600',
+    title: "AI Integration",
+    description:
+      "Experience integrating OpenAI, OCR, and machine learning into production applications.",
+    gradient: "from-fuchsia-600 to-pink-600",
   },
   {
     icon: Cloud,
-    title: 'Cloud & DevOps',
-    description: 'Skilled in Azure, Docker, and modern deployment practices for scalable systems.',
-    gradient: 'from-emerald-600 to-teal-600',
+    title: "Cloud & DevOps",
+    description:
+      "Skilled in Azure, Docker, and modern deployment practices for scalable systems.",
+    gradient: "from-emerald-600 to-teal-600",
   },
 ];
 
 const stats = [
-  { value: '3+', label: 'Years Experience' },
-  { value: '20+', label: 'Projects Completed' },
-  { value: '100%', label: 'Client Satisfaction' },
+  { value: "3+", label: "Years Experience" },
+  { value: "20+", label: "Projects Completed" },
+  { value: "100%", label: "Client Satisfaction" },
 ];
 
 export default function About() {
   return (
-    <div className="min-h-screen pt-24">
+    <section id="about" className="min-h-screen pt-24">
       <Section>
         <SectionTitle
           title="About Me"
@@ -54,7 +58,7 @@ export default function About() {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-cyan-600/20 to-fuchsia-600/20 rounded-3xl blur-3xl" />
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+            <div className="relative bg-gradient-to-br from-white to-white dark:from-white/10 dark:to-white/5 border border-black/10 dark:border-white/10 rounded-3xl p-8 backdrop-blur-xl">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src="/pkk.jpg"
@@ -62,9 +66,11 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 flex items-center gap-3 px-4 py-2 bg-black/60 backdrop-blur-xl rounded-xl border border-white/10">
-                <MapPin className="w-4 h-4 text-violet-400" />
-                <span className="text-sm text-gray-300">Yangon, Myanmar</span>
+              <div className="absolute -bottom-4 -right-4 flex items-center gap-3 px-4 py-2 bg-white dark:bg-black/60 backdrop-blur-xl rounded-xl border border-black/10 dark:border-white/10">
+                <MapPin className="w-4 h-4 text-violet-500" />
+                <span className="text-sm text-gray-900 dark:text-gray-300">
+                  Yangon, Myanmar
+                </span>
               </div>
             </div>
           </motion.div>
@@ -77,22 +83,32 @@ export default function About() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Hi, I'm <span className="text-gradient">Phyo Khant Kyaw</span>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                Hi, I'm{" "}
+                <span className="text-violet-600 dark:text-violet-400">
+                  Phyo Khant Kyaw
+                </span>
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                A Mid-Level .NET Developer with a passion for building scalable backend systems and
-                integrating cutting-edge AI technologies. With over 3 years of professional
-                experience, I specialize in creating robust APIs, microservices, and full-stack
-                applications.
+              <p className="text-black dark:text-white text-lg leading-relaxed">
+                A technology professional with hands-on experience in banking
+                technology, .NET development, microservices, API integration,
+                and AI-powered applications. Currently working as an Assistant
+                Supervisor at CB Bank, supporting core banking-related systems,
+                third-party integrations, and modern .NET-based services.
               </p>
             </div>
-            <p className="text-gray-400 leading-relaxed">
-              My journey in software development has led me to work on diverse projects ranging from
-              e-commerce platforms to AI-powered document processing systems. I'm constantly learning
-              and exploring new technologies to deliver the best solutions.
+
+            <p className="text-black dark:text-white leading-relaxed">
+              My experience spans software development, business workflow
+              analysis, AI-powered document processing, and system
+              troubleshooting. I enjoy understanding business requirements,
+              translating them into practical technical solutions, and solving
+              complex system problems. I am continuously developing my skills in
+              Business Analysis, AI-assisted analysis, and technical project
+              management, with a long-term goal of becoming a Technical Project
+              Manager.
             </p>
-            
+
             <div className="flex flex-wrap gap-6">
               {stats.map((stat, index) => (
                 <motion.div
@@ -103,8 +119,12 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-4xl font-bold text-gradient mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-500">{stat.label}</div>
+                  <div className="text-4xl font-bold text-gradient mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-black dark:text-white">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -119,20 +139,26 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-violet-500/50 transition-all duration-500 hover:-translate-y-2"
+              className="group relative p-6 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-violet-500/50 transition-all duration-500 hover:-translate-y-2"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`} />
-              <div className={`relative inline-flex p-3 rounded-xl bg-gradient-to-br ${item.gradient} mb-4`}>
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}
+              />
+              <div
+                className={`relative inline-flex p-3 rounded-xl bg-gradient-to-br ${item.gradient} mb-4`}
+              >
                 <item.icon className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">
+              <h4 className="text-lg font-semibold text-black dark:text-white mb-2">
                 {item.title}
               </h4>
-              <p className="text-gray-400 text-sm">{item.description}</p>
+              <p className="text-black dark:text-white text-sm">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </Section>
-    </div>
+    </section>
   );
 }

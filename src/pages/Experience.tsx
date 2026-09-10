@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import { experiences } from '@/data/experience';
 
 export default function Experience() {
   return (
+    <section id="experience">
     <Section>
       <SectionTitle
         title="Work Experience"
@@ -41,34 +42,34 @@ export default function Experience() {
                   
                   <motion.div
                     whileHover={{ scale: 1.01 }}
-                    className="group relative p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-violet-500/50 transition-all duration-500"
+                    className="group relative p-6 md:p-8 rounded-2xl bg-white dark:bg-black border border-black/10 dark:border-white/10 hover:border-violet-500/50 transition-all duration-500"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-cyan-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                     
                     <div className="relative">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-gradient transition-colors">
+                          <h3 className="text-xl font-bold group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                             {exp.position}
                           </h3>
-                          <div className="flex items-center gap-2 text-violet-400 font-medium mt-1">
+                          <div className="flex items-center gap-2 text-violet-600 dark:text-violet-400 font-medium mt-1">
                             <Briefcase className="w-4 h-4" />
                             {exp.company}
                           </div>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-500 text-sm mt-3 md:mt-0 px-3 py-1.5 rounded-full bg-white/5">
+                        <div className="flex items-center gap-2 text-black dark:text-white text-sm mt-3 md:mt-0 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5">
                           <Calendar className="w-4 h-4" />
                           {exp.period}
                         </div>
                       </div>
 
-                      <p className="text-gray-400 mb-5">
+                      <p className="text-black dark:text-white mb-5">
                         {exp.description}
                       </p>
 
                       <div>
-                        <h4 className="text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                        <h4 className="text-sm font-medium mb-3 flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
                           Key Achievements
                         </h4>
                         <ul className="space-y-2.5">
@@ -79,7 +80,7 @@ export default function Experience() {
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true }}
                               transition={{ delay: 0.2 + i * 0.05 }}
-                              className="flex items-start gap-3 text-gray-400 text-sm"
+                              className="flex items-start gap-3 text-black dark:text-white text-sm"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 mt-1.5 flex-shrink-0" />
                               {achievement}
@@ -95,27 +96,30 @@ export default function Experience() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-violet-600/10 to-cyan-600/10 border border-white/10 text-center"
-        >
-          <h3 className="text-xl font-semibold text-white mb-2">
-            Want to work together?
-          </h3>
-          <p className="text-gray-400 mb-6">
-            I'm always open to discussing new projects and opportunities.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-600 text-white font-medium hover:from-violet-500 hover:to-cyan-500 transition-all group"
-          >
-            Get in touch
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </motion.div>
+
       </div>
     </Section>
+    </section>
   );
 }
+
+        // <motion.div
+        //   initial={{ opacity: 0, y: 30 }}
+        //   whileInView={{ opacity: 1, y: 0 }}
+        //   viewport={{ once: true }}
+        //   className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-violet-50 to-cyan-50 dark:from-violet-600/10 dark:to-cyan-600/10 border border-black/10 dark:border-white/10 text-center"
+        // >
+        //   <h3 className="text-xl font-semibold mb-2">
+        //     Want to work together?
+        //   </h3>
+        //   <p className="text-black dark:text-white mb-6">
+        //     I'm always open to discussing new projects and opportunities.
+        //   </p>
+        //   <a
+        //     href="/contact"
+        //     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-600 text-white font-medium hover:from-violet-500 hover:to-cyan-500 transition-all group"
+        //   >
+        //     Get in touch
+        //     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        //   </a>
+        // </motion.div>

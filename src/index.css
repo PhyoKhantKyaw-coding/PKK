@@ -17,6 +17,30 @@
   --glow-accent: rgba(244, 114, 182, 0.5);
 }
 
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-surface: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+}
+
+.dark {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-surface: #1a1a24;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --nav-bg: rgba(0, 0, 0, 0.8);
+}
+
 @layer base {
   * {
     @apply border-none;
@@ -27,10 +51,43 @@
   }
 
   body {
-    @apply bg-black text-white antialiased;
+    @apply antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: #0a0a0f;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-white;
+  }
+
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    @apply text-black;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  .dark p {
+    @apply text-white;
+  }
+
+  .light p {
+    @apply text-black;
+  }
+
+  .dark body {
+    @apply bg-black text-white;
+  }
+
+  .light body {
+    @apply bg-white text-black;
+  }
+
 
   ::selection {
     background: rgba(139, 92, 246, 0.3);

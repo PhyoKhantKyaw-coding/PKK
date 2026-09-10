@@ -22,8 +22,8 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary: 'bg-gradient-to-r from-violet-600 to-cyan-600 text-white hover:from-violet-500 hover:to-cyan-500 shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40',
-    secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30',
-    ghost: 'text-gray-400 hover:text-white hover:bg-white/5',
+    secondary: 'bg-black/5 dark:bg-white/10 text-black dark:text-white border border-black/10 dark:border-white/20 hover:bg-black/10 dark:hover:bg-white/20 hover:border-black/20 dark:hover:border-white/30',
+    ghost: 'text-black dark:text-white hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5',
     glow: 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:from-violet-500 hover:to-fuchsia-500 shadow-lg shadow-violet-500/30 hover:shadow-fuchsia-500/40',
   };
 
