@@ -5,7 +5,7 @@ export const experiences: Experience[] = [
   id: 1,
   company: 'CB Bank',
   position: 'Assistant Supervisor',
-  period: 'Jul 2026 – Present',
+  period: '2026 – Present',
   description: 'Supporting core banking-related systems, third-party integrations, and microservices-based banking applications',
   achievements: [
     'Support core banking-related systems and technology solutions within the banking environment',
@@ -19,21 +19,21 @@ export const experiences: Experience[] = [
     'Support system testing, validation, troubleshooting, and technical issue resolution for banking-related services'
   ],
   },
-  {
-    id: 2,
-    company: 'ShopDoora',
-    position: 'Mid-Level .NET Developer',
-    period: 'Feb 2026 – Jul 2026',
-    description: 'Developing microservices-based applications with Clean Architecture and modern authentication',
-    achievements: [
-      'Developed Nutrition Coach Project using Microservices-based .NET REST API architecture',
-      'Set up projects (Nutri_Care, GoodsShop) using Clean Architecture and N-Layer architecture principles',
-      'Designed and implemented Master Data management for all entities, including integration with external APIs',
-      'Built authentication and authorization features, including Admin account creation, Login/Logout, and JWT-based security',
-      'Fixed and optimized bugs across multiple microservices to improve system performance and reliability',
-      'Implemented SMS OTP verification and notification sending features',
-    ],
-  },
+  // {
+  //   id: 2,
+  //   company: 'ShopDoora',
+  //   position: 'Mid-Level .NET Developer',
+  //   period: 'Feb 2026 – Jul 2026',
+  //   description: 'Developing microservices-based applications with Clean Architecture and modern authentication',
+  //   achievements: [
+  //     'Developed Nutrition Coach Project using Microservices-based .NET REST API architecture',
+  //     'Set up projects (Nutri_Care, GoodsShop) using Clean Architecture and N-Layer architecture principles',
+  //     'Designed and implemented Master Data management for all entities, including integration with external APIs',
+  //     'Built authentication and authorization features, including Admin account creation, Login/Logout, and JWT-based security',
+  //     'Fixed and optimized bugs across multiple microservices to improve system performance and reliability',
+  //     'Implemented SMS OTP verification and notification sending features',
+  //   ],
+  // },
   {
     id: 3,
     company: 'Thetys Co., Ltd (under Fusion Solution Co., Ltd)',
